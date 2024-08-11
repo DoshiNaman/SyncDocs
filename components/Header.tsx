@@ -5,15 +5,18 @@ import Link from 'next/link'
 const Header = ({ children, className }: HeaderProps) => {
   return (
     <div className={cn("header", className)}>
-      <Link href='/' className="md:flex-1">
-        <Image 
-          src="/assets/icons/logo.svg"
-          alt="Logo with name"
-          width={120}
-          height={32}
-          className="hidden md:block"
-        />
-        <Image 
+      <Link href="/" className="md:flex-1">
+        <div className="md:flex items-center hidden">
+          <Image
+            src="/assets/icons/logo-icon.svg"
+            alt="Logo with name"
+            width={32}
+            height={32}
+            className="hidden md:block mr-2"
+          />
+          <h2>SyncDocs</h2>
+        </div>
+        <Image
           src="/assets/icons/logo-icon.svg"
           alt="Logo"
           width={32}
